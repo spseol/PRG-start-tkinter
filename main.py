@@ -14,8 +14,20 @@ class Application(tk.Tk):
 
     def __init__(self):
         super().__init__(className=self.name)
+        entryValidate = self.register(self.entryValidate)
         self.title(self.name)
         self.bind("<Escape>", self.quit)
+        self.varR = StringVar(name="varR")
+        self.varR.set(0)
+        self.varR.trace("w", self.entryUpdate)
+        self.entryR = Entry(
+            self,
+            fg="#ff0000",
+            textvariable=self.varR,
+            validate="key",
+            vcmd=(entryValidate, "%P"),
+        )
+        self.entryR.pack()
         self.scaleR = Scale(
             from_=0,
             to=255,
@@ -50,8 +62,26 @@ class Application(tk.Tk):
         self.entryColor = Entry(textvariable=self.varColor, width=7)
         self.entryColor.pack()
 
+    def entryValidate(self, value):
+        if value.isdigit():
+            return True
+        else:
+            return False
+
+    def entryUpdate(self, *arg):
+        "https://stackoverflow.com/questions/29690463/what-are-the-arguments-to-tkinter-variable-trace-method-callbacks#29697307"
+        "print(name, index, operation)"
+        r = self.varR.get()
+        """if r.isdigit():
+            r = int(r)
+        else:
+            self.varR.set(0)
+            r = 0"""
+        self.scaleR.set(r)
+
     def change(self, event):
         r = self.scaleR.get()
+        self.varR.set(r)
         g = self.scaleG.get()
         b = self.scaleB.get()
         hashcolor = "#%02x%02x%02x" % (r, g, b)
@@ -61,6 +91,8 @@ class Application(tk.Tk):
         self.varColor.set(hashcolor)
 
     def quit(self, event=None):
+        print(self.entryR.get())
+        self.entryR.config()
         super().quit()
 
 

@@ -9,5 +9,8 @@ PRG -- TkInter start
 Dokumentace
 -------------
 
+* [What are the arguments to Tkinter variable trace method callbacks?](https://stackoverflow.com/questions/29690463/what-are-the-arguments-to-tkinter-variable-trace-method-callbacks)
+* [Adding validation to an Entry widget](https://tkdocs.com/shipman/entry-validation.html)
+
 * <https://tkdocs.com/shipman/>
 * <http://tkinter.programujte.com/>
