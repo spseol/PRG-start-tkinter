@@ -12,6 +12,11 @@ Dokumentace
 * <https://tkdocs.com/shipman/>
 * <http://tkinter.programujte.com/>
 
+Rapid application development
+-------------------------------
+
+* [Pygubu](https://github.com/alejandroautalan/pygubu-designer)
+
 Co je třeba k psaní programů v TkInter
 ==========================================
 
