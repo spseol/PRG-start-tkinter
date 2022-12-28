@@ -48,3 +48,6 @@ Co je třeba k psaní programů v TkInter
   * https://www.pythontutorial.net/tkinter/tkinter-validation/
   * https://tkdocs.com/shipman/entry-validation.html
   * https://www.geeksforgeeks.org/python-tkinter-validating-entry-widget/
+  
+7. Pořadí widgetů při přepínání tabulátorem
+   * https://www.tutorialspoint.com/how-to-set-the-tab-order-in-a-tkinter-application
