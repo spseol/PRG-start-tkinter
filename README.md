@@ -47,3 +47,4 @@ Co je třeba k psaní programů v TkInter
 6. Validace vstupu
   * https://www.pythontutorial.net/tkinter/tkinter-validation/
   * https://tkdocs.com/shipman/entry-validation.html
+  * https://www.geeksforgeeks.org/python-tkinter-validating-entry-widget/
