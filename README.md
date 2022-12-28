@@ -43,4 +43,7 @@ Co je třeba k psaní programů v TkInter
 5. Aplikace s více okny
   * https://www.pythontutorial.net/tkinter/tkinter-toplevel/
   * https://www.pythontutorial.net/tkinter/tkinter-frame/
-  *
+ 
+6. Validace vstupu
+  * https://www.pythontutorial.net/tkinter/tkinter-validation/
+  * https://tkdocs.com/shipman/entry-validation.html
