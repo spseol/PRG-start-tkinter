@@ -6,6 +6,25 @@ import tkinter as tk
 # from tkinter import ttk
 
 
+class MyEntry(tk.Entry):
+    def __init__(self, master=None, cnf={}, **kw):
+        super().__init__(master, cnf, **kw)
+
+        if not "textvariable" in kw:
+            self.variable = tk.StringVar()
+            self.config(textvariable=self.variable)
+        else:
+            self.variable = kw["textvariable"]
+
+    @property
+    def value(self):
+        return self.variable.get()
+
+    @value.setter
+    def value(self, new: str):
+        self.variable.set(new)
+
+
 class About(tk.Toplevel):
     def __init__(self, parent):
         super().__init__(parent, class_=parent.name)
